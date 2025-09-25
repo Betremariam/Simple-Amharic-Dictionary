@@ -89,4 +89,15 @@ class DictionaryData {
     DictionaryEntry(amharic: "እጅ", english: "Hand", pronunciation: "Ij"),
     DictionaryEntry(amharic: "ፊት", english: "Face", pronunciation: "Fit"),
   ];
+
+  static List<DictionaryEntry> searchEntries(String query) {
+    if (query.isEmpty) return entries;
+
+    return entries.where((entry) {
+      return entry.amharic.toLowerCase().contains(query.toLowerCase()) ||
+          entry.english.toLowerCase().contains(query.toLowerCase()) ||
+          (entry.pronunciation?.toLowerCase().contains(query.toLowerCase()) ??
+              false);
+    }).toList();
+  }
 }
