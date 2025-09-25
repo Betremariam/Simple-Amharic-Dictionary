@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dictionary_data.dart';
 import 'dictionary_screen.dart';
 
 void main() {

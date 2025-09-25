@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dictionary_data.dart';
+import 'dictionary_card.dart';
 
 class DictionaryScreen extends StatefulWidget {
   const DictionaryScreen({super.key});
